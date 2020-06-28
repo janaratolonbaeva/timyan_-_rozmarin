@@ -1,0 +1,148 @@
+.offers
+  padding: 60px 0 90px
+  .container 
+    position: relative
+  &__slide
+    padding: 65px 0
+    opacity: 0.5
+  &__item
+    position: relative
+    background: #fbfbfb
+    padding: 40px 20px 50px 5px
+    max-width: 880px
+    +xs
+      margin-left: 40px
+    +desktop
+      margin-right: 40px
+    .label
+      position: absolute
+      border: 1px solid rgb(243, 243, 243)
+      border-top-left-radius: 10px
+      border-top-right-radius: 10px
+      background: #007197
+      color: #fff
+      padding: 0 10px
+      top: -36px
+      left: 0
+      +xs 
+        top: 69px
+        left: -105px
+        transform: rotate(-90deg)
+      span
+        line-height: 36px
+        font-family: $circleRounded
+        font-size: 16px
+      svg
+        fill: #fff
+        vertical-align: text-bottom
+        margin-right: 10px
+  &__img
+    margin-bottom: 20px
+    +desktop
+      margin-bottom: 0
+      background: url('../img/offers-img-bg.png') center center no-repeat
+      width: 310px
+      height: 367px
+      position: absolute
+      top: -60px
+      left: 30px
+    img
+      margin: auto
+      +desktop
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+  &__content
+    text-align: center
+    padding: 0 10px
+    +mobile
+      padding: 0 30px
+    +desktop
+      text-align: left
+      width: calc(100% - 355px)
+      float: right
+    h5
+      font-size: 30px
+      line-height: 24px
+      font-weight: normal
+      font-family: $circleRounded
+      margin-bottom: 20px
+  &__text
+    margin-bottom: 35px
+  &__bt
+    .price,
+    strike
+      font-size: 30px
+      small
+        font-size: 20px
+    .price
+      margin-right: 25px
+    strike
+      +xs
+        margin-right: 40px
+      color: rgba(64, 64, 64, 0.4)
+    .btn-wrapper
+      display: block
+      margin-top: 10px
+      +xs 
+        margin-top: 0
+        display: inline-block
+  &__slider
+    position: relative
+    .slick
+      &-current
+        opacity: 1
+      &-next 
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 10px
+        border: 2px solid rgb(243, 243, 243)
+        background: #fff
+        display: inline-block
+        border-radius: 50%
+        width: 63px
+        height: 63px
+        transition: $transition
+        +container
+          right: 100px
+        &:hover,
+        &:focus 
+          border: 2px solid $colorInfo
+        &::before
+          content: ''
+          position: absolute
+          top: 5px
+          left: 12px
+          width: 40px
+          height: 40px
+          background: url('../img/down-arrow.svg') no-repeat
+          transform: rotate(-90deg)
+      &-dots
+        li button::before 
+          font-size: 30px
+        li.slick-active button:before,
+        li button:hover::before
+          color: $colorInfo
+          opacity: 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

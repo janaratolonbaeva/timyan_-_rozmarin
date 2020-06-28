@@ -1,0 +1,154 @@
+.card 
+  position: relative
+  background: #f9fdfa
+  padding: 50px 0
+  margin-bottom: 50px
+  +desktop
+    float: right
+    width: calc(100% - 100px)
+  +container 
+    width: calc(100% - 200px)
+  &__img
+    max-width: 555px
+    position: relative
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 30px 20px
+    margin: auto auto 30px
+    background: #fff
+    +tablet
+      box-shadow: 0px 10px 36px 4px rgba(0, 1, 1, 0.05)
+    +desktop
+      padding: 0
+      margin: 0
+      display: block
+      position: absolute
+      top: 50%
+      left: -100px
+      width: 455px
+      transform: translateY(-50%)
+      height: calc(100% - 100px)
+    +container
+      left: -200px
+      width: 555px
+    img
+      width: auto
+      position: static
+      width: 95%
+      height: auto
+      margin: auto
+      display: block
+      +mobile 
+        display: inline
+        margin: 0
+        width: auto
+      +desktop
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    .label
+      @extend %labelCatalog
+      font-size: 18px
+      background: #fff
+      +tablet
+        box-shadow: 0px 10px 36px 4px rgba(0, 1, 1, 0.02)
+  &__content
+    padding: 0 35px 0 45px
+    +desktop
+      width: calc(100% - 355px)
+      float: right
+    .link 
+      font-size: 16px
+      line-height: 30px
+      display: inline-block
+      margin-bottom: 25px
+      svg 
+        fill: #404040
+        vertical-align: middle
+        margin-right: 10px
+    h3
+      font-family: $circleRounded
+      font-size: 30px
+      line-height: normal
+      font-weight: normal
+      margin-bottom: 25px
+      text-align: center
+      +mobile
+        text-align: left
+    &-aboutProduct
+      padding-bottom: 30px
+      border-bottom: 1px solid rgb(243, 243, 243)
+      +mobile
+        padding-bottom: 50px
+    &-text
+      text-align: center
+      margin-bottom: 10px
+      +mobile
+        text-align: left
+        float: left
+        width: 60%
+        padding-right: 15px
+        margin-bottom: 0
+    &-info
+      text-align: center
+      padding-top: 15px
+      border-top: 1px solid rgb(243, 243, 243)
+      +mobile
+        text-align: left
+        float: right
+        width: 40%
+        padding-top: 0
+        border-top: 0
+        padding-left: 25px
+        border-left: 1px solid rgb(243, 243, 243)
+      p 
+        margin-bottom: 10px
+      svg 
+        margin-right: 10px
+        fill: $colorInfo
+        vertical-align: middle
+    &-stock 
+      padding-top: 25px
+    .price__block
+      text-align: center
+      +xs 
+        text-align: left
+      .price
+        display: inline-block
+        margin-right: 40px
+        float: none
+        +xs 
+          float: left
+      strike 
+        display: inline-block
+        margin-bottom: 20px
+        float: none
+        +xs 
+          float: left
+          margin-bottom: 0
+      .btn__tick-wrap
+        width: 100%
+        +xs 
+          float: right
+          width: auto
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+

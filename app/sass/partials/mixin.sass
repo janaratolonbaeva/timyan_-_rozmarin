@@ -1,0 +1,135 @@
+$transition: all 0.35s ease
+$colorFontMain: #292929
+$colorInfo: #53a174
+$borderColorDefult: rgb(221, 221, 221)
+$circleRounded: 'Circe Rounded'
+$idealistSansReg: 'idealist_sansregular'
+$idealistSansLight: 'idealist_sanslight'
+
+=mini
+  @media screen and (min-width: 400px)
+    @content
+=xs
+  @media screen and (min-width: 500px)
+    @content
+=minWidth550
+  @media screen and (min-width: 550px)
+    @content
+=mobile
+  @media screen and (min-width: 650px)
+    @content
+=tablet
+  @media screen and (min-width: 768px)
+    @content
+=minWidth850
+  @media screen and (min-width: 850px)
+    @content
+=desktop
+  @media screen and (min-width: 992px)
+    @content
+=minWidth1100
+  @media screen and (min-width: 1100px)
+    @content
+=container
+  @media screen and (min-width: 1185px)
+    @content
+=minWidth1400
+  @media screen and (min-width: 1400px)
+    @content
+
+=placeholder
+  &::-webkit-input-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
+
+=circle($color, $width, $height)
+  position: absolute
+  border-radius: 50%
+  background: $color
+  width: $width
+  height: $height
+  display: block
+
+=trapezium($left, $top, $right, $bottom, $width, $height, $color, $left1, $top1, $right1, $bottom1, $bdWidth1, $bdColor1, $left2, $top2, $right2, $bottom2, $bdWidth2, $bdColor2)
+    position: absolute
+    left: $left
+    top: $top
+    right: $right
+    bottom: $bottom
+    width: $width
+    height: $height
+    background: $color
+    transform: skew(2deg)
+    z-index: -1
+    transition: $transition
+    &::before
+      content: ''
+      position: absolute
+      left: $left1
+      top: $top1
+      right: $right1
+      bottom: $bottom1
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: $bdWidth1
+      border-color: $bdColor1
+      transition: $transition
+    &::after
+      content: ''
+      position: absolute
+      left: $left2
+      top: $top2
+      right: $right2
+      bottom: $bottom2
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: $bdWidth2
+      border-color: $bdColor2
+      transition: $transition
+
+%labelCatalog
+  position: absolute
+  top: -17px
+  left: 25px
+  background: rgb(251, 251, 251)
+  font-size: 16px
+  font-family: $circleRounded
+  line-height: 34px
+  border-radius: 6px
+  padding: 0 15px
+  z-index: 1
+  span 
+    color: #007197
+  svg 
+    fill: #007197
+    vertical-align: middle
+    margin-right: 10px
+
+%titleCatalog
+  font-size: 18px
+  font-family: $circleRounded
+  font-weight: normal
+  line-height: 24px
+  margin-bottom: 20px
+
+%textCatalog
+  font-size: 12px
+  line-height: 18px
+
+%imgCatalog
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+
+
+
+

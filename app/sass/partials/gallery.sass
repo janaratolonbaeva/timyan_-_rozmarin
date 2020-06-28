@@ -1,0 +1,89 @@
+.gallery
+  padding-bottom: 40px
+  +xs
+    margin-top: -40px
+  +minWidth850
+    margin-top: 0
+    padding: 40px 0
+  .title
+    margin-bottom: 50px
+  &__col
+    +minWidth850
+      width: 50%
+      float: left
+    +container
+      width: 33.3%
+  &__item
+    position: relative
+    max-width: 360px
+    display: block
+    padding: 20px 0 160px
+    margin: auto
+    overflow: hidden
+    +xs
+      overflow: initial
+    &:hover
+      .gallery__bg
+        background: $colorInfo
+        &::before
+          border-color: transparent transparent $colorInfo transparent
+        &::after
+          border-color: transparent $colorInfo transparent transparent
+      h4
+        &::before
+          width: 100%
+    h4
+      font-family: $circleRounded
+      font-weight: normal
+      font-size: 36px
+      line-height: normal
+      max-width: 330px
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        height: 120%
+        width: 0
+        background: #fff
+        z-index: -1
+        transition: $transition
+  &__img
+    height: 285px
+    position: relative
+    img 
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      +xs 
+        left: -20px
+  &__num
+    border-radius: 4px
+    background: #fff
+    padding: 0 15px
+    position: absolute
+    top: 10px
+    right: 10px
+    span
+      font-size: 19px
+      line-height: 42px
+  &__bg
+    +trapezium(auto, 0, -10px, auto, 310px, 445px, #f7f8f9, -25px, 0, auto, auto, 0 25px 445px 25px, transparent transparent #f7f8f9 transparent, -20px, auto, auto, -30px, 0 330px 30px 0, transparent #f7f8f9 transparent transparent)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

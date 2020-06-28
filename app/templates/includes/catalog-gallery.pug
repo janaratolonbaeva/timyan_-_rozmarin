@@ -1,0 +1,117 @@
+section.catalog
+  .catalog__top.clearfix
+    h1.title
+      span Суши и роллы
+        svg(width="40", height="25")
+          use(xlink:href="#ic-down-arrow")
+      .dropdown__wrap
+        ul.dropdown
+          each item in mobileMenuItem
+            li: a(href= item.href)= item.text
+    ul.catalog__menu
+      each item in catalogMenuItem
+        if (item.class)
+          li: a(href="#" class= item.class)= item.text
+        else
+          li: a(href="#")= item.text
+    .catalog__choice
+      span ПО ПОПУЛЯРНОСТИ
+        svg(width="15", height="10")
+          use(xlink:href="#ic-down-arrow")
+      .dropdown__wrap
+        ul.dropdown
+          each item in choiceItem
+            li: a(href="#")= item
+  .catalog__block
+    each item in catalogItem
+      if (item.catalogItemSmall)
+        .catalog__col
+          .catalog__item
+            if (item.catalogItemSmall.label)
+              .label
+                svg(width="20", height="20")
+                  use(xlink:href=`#ic-${item.catalogItemSmall.label.icon}`)
+                span= item.catalogItemSmall.label.text
+            .catalog__item-img
+              img(src=`uploads/catalog-page/catalog-img-${item.catalogItemSmall.image}.jpg`, alt="Product image")
+            .catalog__item-content
+              .catalog__item-content-top
+                h5= item.catalogItemSmall.title
+                p= item.catalogItemSmall.text
+              .price__block.clearfix
+                span.price= item.catalogItemSmall.price
+                  small ₽
+                if (item.catalogItemSmall.strike)
+                  strike= item.catalogItemSmall.strike
+                    small ₽
+                .btn__tick-wrap
+                  .btn__tick
+                    svg(viewBox='0 0 48 48', xmlns='http://www.w3.org/2000/svg')
+                      path(d='M 18 32.34 l -8.34 -8.34 -2.83 2.83 11.17 11.17 24 -24 -2.83 -2.83 z', stroke='#305e44', fill='transparent')
+                  button.btn.btn--circle
+                    svg(width="25", height="25")
+                      use(xlink:href="#ic-basket")
+      if (item.catalogItemLarge)
+        .catalog__colLg
+          .catalog__itemLg
+            .catalog__itemLg-top.clearfix
+              .catalog__itemLg-img
+                img(src=`uploads/catalog-page/catalog-img-${item.catalogItemLarge.image}.jpg`, alt="Product image")
+              .catalog__itemLg-content
+                h5= item.catalogItemLarge.title
+                p= item.catalogItemLarge.text
+            .catalog__itemLg-bt
+              .wrap-stock.clearfix
+                .wrap-stock-left
+                  .stock__price= item.catalogItemLarge.stockPrice
+                  .stock__text= item.catalogItemLarge.stockText
+                .wrap-stock-right
+                  p
+                    svg(width="20", height="20")
+                      use(xlink:href="#ic-timer")
+                    | Акция действует:
+                  .inputs
+                    form
+                      input(type="text")
+                      input(type="text")
+                      input(type="text")
+              .price__block.clearfix
+                span.price= item.catalogItemLarge.price
+                  small ₽
+                if (item.catalogItemLarge.strike)
+                  strike= item.catalogItemLarge.strike
+                    small ₽
+                .btn__tick-wrap
+                  .btn__tick
+                    svg(viewBox='0 0 48 48', xmlns='http://www.w3.org/2000/svg')
+                      path(d='M 18 32.34 l -8.34 -8.34 -2.83 2.83 11.17 11.17 24 -24 -2.83 -2.83 z', stroke='#305e44', fill='transparent')
+                  button.btn.btn--sm.btn--basket
+                    span
+                      svg(width="25", height="25")
+                        use(xlink:href="#ic-basket")
+                      | В корзину
+          
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

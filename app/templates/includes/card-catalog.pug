@@ -1,0 +1,28 @@
+section.card-catalog
+  .container
+    h3.card-catalog__title С этим блюдом покупают
+    .clearfix
+      each item in cardCatalogItem
+        .card-catalog__col
+          .card-catalog__item
+            .card-catalog__img
+              img(src=`uploads/card-page/catalog-card-img-${item.image}.jpg`, alt="Product Image")
+            .card-catalog__content
+              h5= item.title
+              span 99
+                small ₽
+              .btn__tick-wrap
+                .btn__tick
+                  svg(viewBox='0 0 48 48', xmlns='http://www.w3.org/2000/svg')
+                    path(d='M 18 32.34 l -8.34 -8.34 -2.83 2.83 11.17 11.17 24 -24 -2.83 -2.83 z', stroke='#305e44', fill='transparent')
+                button.btn.btn--circle
+                  svg(width="25", height="25")
+                    use(xlink:href="#ic-basket")
+
+
+
+
+
+
+
+

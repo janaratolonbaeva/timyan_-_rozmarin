@@ -1,0 +1,88 @@
+.delivery
+  background: #fafbfc
+  padding: 30px 0
+  .title
+    margin-bottom: 30px
+    span
+      display: block
+      font-size: 36px
+  &__text
+    margin-bottom: 40px
+    p 
+      font-size: 16px
+  &__content
+    +desktop
+      float: left
+      width: calc(100% - 390px)
+      padding-top: 35px
+  &__img
+    display: none
+    +desktop
+      display: block
+      text-align: center
+      float: right
+      width: 390px
+      position: relative
+      z-index: 2
+    &::before
+      +desktop
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        z-index: -1
+        +circle(#fff, 336px, 336px)
+  &__col
+    margin-bottom: 20px
+    +mobile
+      width: 50%
+      float: left
+      margin-bottom: 0
+    &:first-child
+      padding-right: 10px
+  &__item
+    max-width: 360px
+    border-radius: 6px
+    background: #fff
+    padding: 70px 20px 20px 20px
+    min-height: 165px
+    position: relative
+    margin: auto
+    text-align: center
+    +mini
+      text-align: left
+      padding: 20px 20px 20px 90px
+    +mobile
+      margin: 0
+    &::before
+      content: ''
+      position: absolute
+      top: 10px
+      left: 50%
+      transform: translateX(-50%)
+      width: 65px
+      height: 60px
+      +mini
+        top: 20px
+        width: 90px
+        left: 10px 
+        transform: translateX(0) 
+    &.dish
+      &::before
+        background: url('../img/serving-dish.svg') no-repeat
+    &.cheese
+      &::before
+        background: url('../img/cheese.svg') no-repeat
+    h5 
+      font-family: $circleRounded
+      font-size: 18px
+      margin-bottom: 5px
+
+
+
+
+
+
+
+

@@ -1,0 +1,315 @@
+.header
+  position: relative
+  z-index: 2
+  margin-bottom: 95px
+  +desktop
+    margin-bottom: 5px
+  &__block
+    position: relative
+    background: transparent
+    height: 100px
+    overflow: hidden
+    color: #fff
+    font-family: $circleRounded
+    &::before
+      content: ''
+      position: absolute
+      bottom: 20px 
+      left: 50%
+      transform: translateX(-50%)
+      width: 150%
+      height: 150%
+      border-radius: 50%
+      background: #434242
+      z-index: -1
+      box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5)
+      +desktop
+        bottom: 0
+  &__left
+    float: left
+    margin-top: 20px
+    +desktop
+      margin-top: 37px
+  &__right
+    float: right
+    margin-top: 10px
+    +desktop
+      margin-top: 30px
+  .menu
+    display: none
+    +tablet
+      display: block
+    float: left
+    li 
+      display: inline-block
+      &:not(:last-child)
+        margin-right: 15px
+    a
+      position: relative
+      display: block
+      &:hover
+        svg
+          stroke-dashoffset: 0
+          opacity: 1
+          transition: opacity 0s, stroke-dashoffset 0.3s cubic-bezier(0.645, 0.045, 0.355, 1)
+      svg
+        fill: none
+        stroke: $colorInfo
+        stroke-width: 2
+        stroke-miterlimit: 10
+        stroke-dasharray: 338
+        stroke-dashoffset: 338
+        stroke-linecap: round
+        position: absolute
+        top: 50%
+        left: 50%
+        width: calc(100% + 20px)
+        opacity: 0
+        transform: translate(-50%, -50%)
+        transition: stroke-dashoffset 0s 0.2s, opacity 0.2s
+        z-index: -1
+  .logo 
+    position: absolute
+    top: 60px
+    left: 50%
+    transform: translateX(-50%)
+    display: block
+    width: 250px
+    height: 125px
+    background: #434242
+    z-index: 3
+    border-radius: 0 0 50% 50% / 0 0 100% 100%
+    padding-top: 25px
+    +desktop
+      padding-top: 0
+      border-radius: 0
+      top: 15px
+      width: auto
+      height: auto
+      background: transparent
+    +container
+      top: 5px
+    img
+      display: block
+      width: 200px
+      height: auto
+      margin: auto
+      +container
+        width: auto
+  .enter
+    float: right
+    padding: 0 10px
+    margin: 10px 0 0 10px
+    border-left: 1px solid rgba(0, 0, 0, 0.102)
+    position: relative
+    display: block
+    transition: $transition
+    &:hover
+      text-decoration: underline
+      &::before
+        width: 100%
+    &::before
+      content: ''
+      position: absolute
+      top: -4px
+      left: 0
+      width: 0
+      height: 30px
+      background: rgba(0, 0, 0, 0.102)
+      z-index: -1
+      transition: $transition
+    +xs
+      padding: 0 20px
+      margin: 10px 0 0 20px
+  .basket
+    float: right
+    margin-left: 10px
+    position: relative
+    +xs 
+      margin-left: 40px
+    span
+      position: absolute
+      top: 0
+      right: 0
+      background: rgb(0, 113, 151)
+      width: 16px
+      height: 16px
+      border-radius: 50%
+      display: inline-block
+      text-align: center
+      font-size: 10px
+      line-height: 16px
+      font-weight: bold
+    svg 
+      fill: #fff
+  .phone
+    font-size: 16px
+    line-height: 40px
+    transition: $transition
+    &:hover
+      color: $colorInfo
+    +xs
+      font-size: 20px
+    +tablet
+      line-height: 20px
+    span
+      font-size: 20px 
+      +xs
+        font-size: 26px
+      +tablet
+        font-size: 28px
+    &__block
+      float: left
+      .mode
+        display: none
+        font-size: 12px
+        line-height: 18px
+        +tablet
+          display: block
+
+.burger
+  float: left
+  cursor: pointer
+  padding-left: 35px
+  position: relative
+  +xs
+    margin-right: 30px
+  +container
+    margin-right: 60px
+  i 
+    position: absolute 
+    width: 30px 
+    height: 2px 
+    background-color: #fff 
+    top: 9px 
+    left: 10px
+    margin-top: -1px 
+    margin-left: -10px
+    transition: $transition 
+    &:nth-child(1) 
+      transform: translateY(-6px) 
+    &:nth-child(3) 
+      transform: translateY(6px)
+      width: 20px
+  &:hover 
+    cursor: pointer 
+    i 
+      &:nth-child(3) 
+        transform-origin: 0% 0% 
+        transform: translate(10px, 6px) rotate(-33deg) 
+        width: 10px 
+        margin-left: 0 
+      &:nth-child(1) 
+        transform-origin: 0% 0% 
+        transform: translate(10px, -6px) rotate(31deg) 
+        width: 12px 
+        margin-left: 0
+  span
+    font-size: 18px
+    text-transform: uppercase
+    display: none
+    +xs
+      display: inline
+
+.mobile
+  position: fixed
+  top: 0
+  left: 0
+  width: 70%
+  max-width: 370px
+  height: 100vh
+  background: #434242
+  color: #fff
+  z-index: 100
+  transform: translateX(-100%)
+  transition: .5s ease
+  &-active
+    transform: translateX(0)
+  &__menu
+    position: absolute
+    top: 50%
+    left: 0
+    width: 100%
+    transform: translateY(-50%)
+    li 
+      font-size: 22px
+      line-height: 24px
+      padding: 0 10px
+      a
+        transition: $transition
+        // overflow: hidden
+        position: relative
+        display: inline-block
+        padding: 10px
+        &:hover
+          svg
+            stroke-dashoffset: 0
+            opacity: 1
+            transition: opacity 0s, stroke-dashoffset 0.3s cubic-bezier(0.645, 0.045, 0.355, 1)
+        svg
+          fill: none
+          stroke: $colorInfo
+          stroke-width: 2
+          stroke-miterlimit: 10
+          stroke-dasharray: 338
+          stroke-dashoffset: 338
+          stroke-linecap: round
+          position: absolute
+          top: 50%
+          left: 50%
+          width: calc(100% + 20px)
+          opacity: 0
+          transform: translate(-50%, -50%)
+          transition: stroke-dashoffset 0s 0.2s, opacity 0.2s
+          z-index: -1
+      // a 
+      //   transition: $transition
+      //   overflow: hidden
+      //   position: relative
+      //   display: inline-block
+      //   padding: 10px
+      //   &:hover
+      //     color: $colorInfo 
+      //     &::before 
+      //       animation: animate .5s linear forwards
+      //   &::before 
+      //     content: '' 
+      //     position: absolute 
+      //     top: calc(50% - 2px) 
+      //     left: -100% 
+      //     width: 100% 
+      //     height: 4px 
+      //     background: rgba(0, 0, 0, .102)
+      //     transition: $transition
+  .close-btn
+    position: absolute
+    top: 30px
+    right: 30px
+    font-size: 30px
+    cursor: pointer
+    
+@keyframes animate 
+  0% 
+    top: calc(50% - 2px) 
+    left: -100% 
+    height: 4px 
+    z-index: 1 
+  50% 
+    top: calc(50% - 2px) 
+    left: 0 
+    height: 4px 
+    z-index: 1 
+  100% 
+    top: 0 
+    left: 0 
+    height: 100% 
+    z-index: -1 
+
+
+
+
+
+
+
+
+

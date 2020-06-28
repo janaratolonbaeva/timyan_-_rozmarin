@@ -1,0 +1,103 @@
+.promo
+  background: #f6f5f4
+  color: #484848
+  margin-top: -60px
+  font-family: $circleRounded
+  position: relative
+  display: none
+  +minWidth850
+    display: block
+  &__slide
+    padding: 70px 0 180px
+  &__content
+    width: 65%
+    float: left
+    padding-top: 80px
+    h3
+      font-size: 58px
+      line-height: 60px
+      margin-bottom: 30px
+      font-weight: normal
+      span
+        display: inline-block
+        border-radius: 30px
+        background: #fff
+        margin-bottom: 5px
+        padding: 2px 10px
+  &__img
+    float: left
+    width: 35%
+    position: relative
+    img 
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+  &__nav
+    position: relative
+    bottom: 0
+    left: 0
+    width: 100%
+    max-width: 1400px
+    margin: 0 auto
+    margin-top: -161px
+    &-item
+      opacity: .5
+      padding: 30px 5px 0
+      width: calc(100% / 4)
+      &-img
+        float: left
+        margin-right: 25px
+        z-index: 1
+        position: relative
+        img
+          height: 65px
+          width: auto
+          display: block
+      &-bg 
+        +trapezium(auto, 0, -10px, auto, 36px, 60px, #d3fbe1, -7px, 0, auto, auto, 0 7.5px 60px 7.5px, transparent transparent #d3fbe1 transparent, -10px, auto, auto, -2px, 0 46px 3.5px 0, transparent #d3fbe1 transparent transparent)
+      a 
+        position: relative
+        display: block
+        padding: 40px 25px 25px 50px
+        background: #fff
+        width: 100%
+        .num
+          position: absolute
+          top: -20px
+          left: 40px
+          line-height: 40px
+          text-align: center
+          background: #fff
+          border-radius: 50% 50% 0 0 / 100% 100% 0 0
+          display: block
+          width: 45px
+          height: 22.5px
+        span
+          float: left
+          display: block
+          width: calc(100% - 100px)
+          padding-top: 10px
+        .label
+          position: absolute
+          font-family: $circleRounded
+          color: $colorInfo
+          font-weight: bold
+          font-size: 18px
+          top: 50%
+          left: 10px
+          transform: translateY(-50%) rotate(-90deg)
+      &.slick-current
+        opacity: 1
+        a
+          box-shadow: 0px 5px 4.75px 0.25px rgba(0, 1, 2, 0.05)
+          transform: scale(1.1)
+
+
+
+
+
+
+
+
+

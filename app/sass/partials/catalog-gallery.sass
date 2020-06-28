@@ -1,0 +1,372 @@
+.catalog
+  &__top
+    padding-bottom: 10px
+    border-bottom: 1px solid rgb(243, 243, 243)
+    margin-bottom: 60px
+    .title
+      position: relative
+      cursor: pointer
+      text-align: center
+      +desktop
+        text-align: left
+        float: left
+        width: 45%
+      span 
+        display: inline-block
+        position: relative
+        cursor: pointer
+        svg 
+          position: absolute
+          top: 10px
+          right: -45px
+          fill: #404040
+          transition: $transition
+          +tablet
+            top: 17px
+      .dropdown
+        padding: 20px 10px
+        li 
+          font-family: $circleRounded
+          font-size: 24px
+          line-height: 28px
+        &__wrap 
+          padding-top: 20px
+          top: 40px
+          min-width: 300px
+          +desktop
+            left: 0
+            transform: translateX(0)
+      &:hover
+        svg
+          transform: rotate(-180deg)
+        .dropdown
+          opacity: 1
+          &__wrap
+            display: block
+    .dropdown
+      background: #fbfbfb
+      opacity: 0
+      transition: opacity .75s ease
+      &__wrap
+        position: absolute
+        z-index: 5
+        display: none
+        left: 50%
+        transform: translateX(-50%)
+      li
+        a 
+          display: block
+          &:hover
+            color: $colorInfo
+  &__menu
+    text-align: center
+    padding-top: 20px
+    +xs
+      text-align: left
+      float: left
+    +desktop
+      text-align: center
+      width: calc(100% - 65%)
+    li 
+      display: inline-block
+      &:not(:last-child)
+        margin-right: 20px
+      a 
+        display: block
+        position: relative
+        transition: $transition
+        &::before
+          content: ''
+          position: absolute
+          bottom: -10px
+          left: 0
+          width: 100%
+          height: 0
+          background: $colorInfo
+          transition: $transition
+          +xs 
+            bottom: -19px
+        &:hover,
+        &.active
+          color: $colorInfo
+          &::before
+            height: 6px
+  &__choice
+    text-align: center
+    position: relative
+    padding-top: 20px
+    +xs 
+      float: right
+      text-align: right
+      padding-right: 25px
+    +desktop
+      width: 20%
+    span 
+      display: inline-block
+      position: relative
+      cursor: pointer
+      font-size: 12px
+      text-transform: uppercase
+      svg 
+        position: absolute
+        top: 5px
+        right: -20px
+        fill: #404040
+        transition: $transition
+    .dropdown
+      padding: 10px 15px
+      text-align: left
+      &__wrap
+        padding-top: 35px
+        top: 15px
+        +xs
+          left: auto
+          right: 0
+          transform: translateX(0)
+    &:hover
+      svg
+        transform: rotate(-180deg)
+      .dropdown
+        opacity: 1
+        &__wrap
+          display: block
+          min-width: 150px
+  &__block
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+  &__col
+    width: 100%
+    margin-bottom: 35px
+    +mobile
+      width: 50%
+      padding: 0 5px
+    +desktop
+      width: 25%
+    +container
+      padding: 0
+  &__item 
+    display: block
+    max-width: 265px
+    margin: auto
+    border: 1px solid rgb(243, 243, 243)
+    border-radius: 4px
+    position: relative
+    background: #fbfbfb
+    +container
+      margin: 0
+    .label 
+      @extend %labelCatalog
+    &-img 
+      height: 225px
+      position: relative
+      background: #fff
+      img
+        @extend %imgCatalog
+    &-content
+      padding: 15px 20px
+      background: #fbfbfb
+      h5 
+        @extend %titleCatalog
+      p 
+        @extend %textCatalog
+  &__colLg
+    margin-bottom: 35px
+    width: 100%
+    +mobile
+      padding: 0 5px
+    +desktop
+      width: 50%
+    +container
+      padding: 0
+  &__itemLg
+    border: 1px solid rgb(243, 243, 243)
+    border-radius: 4px
+    max-width: 555px
+    margin: auto
+    background: #fbfbfb
+    +container
+      margin: 0
+    &-top
+      padding: 10px 0
+      background: #fff
+      +minWidth550 
+        height: 225px
+        padding: 30px 0 40px
+    &-img 
+      position: relative
+      margin-bottom: 10px
+      padding-bottom: 10px
+      border-bottom: 1px solid rgba(243, 243, 243, 0.4)
+      height: 200px
+      +minWidth550
+        float: left
+        width: 50%
+        height: 100%
+        border-bottom: none
+        border-right: 1px solid rgba(243, 243, 243, 0.4)
+      img 
+        @extend %imgCatalog
+    &-content
+      text-align: center
+      padding: 5px 20px
+      +minWidth550
+        text-align: left
+        padding-left: 30px
+        width: 50%
+        float: left
+      h5
+        @extend %titleCatalog
+      p 
+        @extend %textCatalog
+    &-bt 
+      padding: 30px 10px
+      background: #fbfbfb
+      +minWidth550
+        padding: 30px 15px 10px 40px
+      .price__block
+        text-align: center
+        +mini 
+          text-align: left
+        .price
+          display: inline-block
+          margin-right: 40px
+          float: none
+          +mini 
+            float: left
+        strike 
+          display: inline-block
+          margin-bottom: 20px
+          float: none
+          +mini 
+            float: left
+            margin-bottom: 0
+        .btn__tick-wrap
+          width: 100%
+          +mini 
+            float: right
+            width: auto
+.wrap-stock
+  padding-bottom: 25px
+  &-left 
+    font-family: $circleRounded
+    color: #fff
+    text-align: center
+    margin-bottom: 10px
+    +minWidth550
+      margin-bottom: 0
+      text-align: left
+      width: 95px
+      float: left
+  .stock 
+    &__price 
+      line-height: 46px
+      font-size: 30px
+      position: relative
+      background: $colorInfo
+      padding: 0 10px
+      margin-right: 5px
+      display: inline-block
+      +minWidth550
+        padding: 0
+        padding-left: 10px
+        display: block
+        margin-right: 0
+        margin-bottom: 5px
+        &::before
+          content: ''
+          position: absolute
+          top: -10px
+          left: 0
+          width: 0
+          height: 0
+          border-style: solid
+          border-width: 0 0 10px 95px
+          border-color: transparent transparent $colorInfo transparent
+    &__text
+      font-size: 16px
+      text-transform: uppercase
+      position: relative
+      background: #007197
+      padding: 10px  
+      display: inline-block
+      +minWidth550
+        display: block
+        padding: 10px 0 0 10px
+        &::before
+          content: ''
+          position: absolute
+          bottom: -5px
+          left: 0
+          width: 0
+          height: 0
+          border-style: solid
+          border-width: 5px 95px 0 0
+          border-color: #007197 transparent transparent transparent
+  &-right
+    text-align: center
+    +minWidth550
+      text-align: left
+      float: left
+      width: calc(100% - 95px)
+      padding-left: 55px
+    p 
+      font-size: 16px
+      line-height: 28px
+      font-family: $circleRounded
+      margin-bottom: 10px
+      svg 
+        fill: $colorInfo
+        vertical-align: middle
+        margin-right: 10px
+    .inputs 
+      input
+        font-family: $idealistSansLight
+        font-size: 18px
+        color: #404040
+        text-align: center
+        border-width: 1px
+        border-color: rgb(233, 233, 233)
+        border-style: dashed
+        border-radius: 4px
+        background-color: rgb(255, 255, 255)
+        width: 91px
+        line-height: 28px
+        margin-bottom: 5px
+.price
+  float: left
+  margin-right: 30px
+  &__block
+    padding-top: 15px
+    border-top: 1px solid rgb(243, 243, 243)
+    line-height: 35px
+    font-size: 30px
+    small 
+      font-size: 18px
+    strike 
+      color: rgba(64, 64, 64, 0.4)
+      float: left
+    .btn__tick-wrap 
+      float: right
+
+      
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,177 @@
+.footer
+  &__top
+    background: #f7f8f9
+    padding: 15px 0 30px
+    position: relative
+    z-index: 2
+    font-family: $circleRounded
+    overflow: hidden
+    +desktop
+      overflow: initial
+  &__logo
+    text-align: center
+    margin-bottom: 20px
+    +desktop
+      text-align: left
+      margin-bottom: 0
+      float: left
+      width: 33%
+  &__phone
+    text-align: center
+    margin-bottom: 20px
+    padding-top: 10px
+    +mobile
+      text-align: left
+      float: left
+      width: 50%
+      padding-top: 23px
+      margin-bottom: 0
+    +desktop
+      width: 27%
+    .phone 
+      font-size: 36px
+      margin-bottom: 15px
+      transition: $transition
+      &:hover
+        color: $colorInfo
+    .mode 
+      font-size: 16px
+      color: rgba(64, 64, 64, 0.6)
+  &__menu
+    width: 100%
+    margin-bottom: 20px
+    text-align: center
+    +xs
+      text-align: left
+    +desktop
+      float: left
+      width: calc(100% - (52% + 33%))
+      padding-top: 18px
+      margin-bottom: 0
+    a 
+      transition: $transition
+      &:hover
+        color: $colorInfo
+    p 
+      margin-bottom: 10px
+      +xs
+        float: left
+        width: calc(100%/5)
+        margin-bottom: 0
+      +desktop
+        width: auto
+        float: none
+        margin-bottom: 10px
+      a 
+        font-size: 22px
+        text-decoration: underline
+    li 
+      +xs
+        float: left
+        width: calc(100%/5)
+        text-align: center
+      +desktop
+        text-align: left
+        float: none
+        width: auto
+        font-size: 16px
+        line-height: 30px
+  &__social
+    text-align: center
+    +mobile
+      width: 50%
+      float: right
+      text-align: right
+    +desktop
+      text-align: center
+      width: 25%
+    a 
+      display: inline-block
+      &:not(:last-child)
+        margin-right: 40px
+      svg 
+        vertical-align: middle
+        fill: #404040
+      &:hover
+        svg 
+          fill: $colorInfo
+    .social__block
+      margin-bottom: 20px
+  &__icons
+    margin: auto
+    width: 100%
+    height: 88px
+    position: absolute
+    bottom: -25px
+    left: 0
+    z-index: 1
+    pointer-events: none
+    min-width: 768px
+    i 
+      position: relative
+      width: calc(100% / 7)
+      height: 88px
+      display: inline-block
+      &::before
+        content: ""
+        position: absolute
+        background:	url('../img/sprite-footer.png')
+        width: 80px
+        height: 88px
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        background-position-x: 0
+  &__bt 
+    padding: 10px 0 0
+    background: #f3f4f5
+    position: relative
+    z-index: 2
+    font-family: $circleRounded
+    text-align: center
+    +mobile 
+      padding: 10px 0
+      text-align: left
+    p 
+      margin-bottom: 10px
+      +mobile
+        &:first-child
+          float: left
+        &:last-child 
+          float: right
+      a 
+        text-decoration: underline
+        &:hover 
+          color: $colorInfo
+
+
+
+@for $i from 0 through 7
+  .footer__icons i:nth-child(#{$i+1})
+    &::before
+      background-position-x:  -(80px * $i)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

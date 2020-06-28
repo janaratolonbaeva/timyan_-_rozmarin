@@ -1,0 +1,42 @@
+footer.footer
+  .footer__top
+    .container.clearfix
+      .footer__logo
+        a(href="#").logo
+          img(src="uploads/logo-black.png", width="253", height="78", alt="Logo")
+        p Тимьян и Розмарин - доставка готовой еды
+      .footer__menu.clearfix
+        p: a(href="#") В меню
+        ul
+          each item in footerMenuItem
+            li
+              a(href="#")= item
+      .footer__phone
+        .phone__block
+          a(href="tel: +7 978 123 15 69").phone +7 978 
+            span 123 15 69
+          span.mode Каждый день с 9:00 до 23:00
+      .footer__social
+        .social__block
+          a(href="#")
+            svg(width="50", height="35")
+              use(xlink:href="#ic-vk")
+          a(href="#")
+            svg(width="35", height="35")
+              use(xlink:href="#ic-inst")
+          a(href="#")
+            svg(width="30", height="50")
+              use(xlink:href="#ic-fb")
+        p: a(href="#") Пользовательское соглашение
+    .footer__icons
+      i
+      i
+      i
+      i
+      i
+      i
+      i
+  .footer__bt
+    .container.clearfix
+      p ООО "123" 115035, г. Севастополь, ул. Партизанов, д. 82, пом.
+      p: a(href="https://promoaccent.ru/" target="_blank") Сделано веб-студией PA

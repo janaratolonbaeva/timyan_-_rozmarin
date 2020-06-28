@@ -1,0 +1,13 @@
+section.gallery
+  .container
+    h2.title Меню
+    .clearfix
+      each item in galleryItem
+        .gallery__col(data-aos="fade-up", data-aos-offset="300", data-aos-duration="1000")
+          a(href="#").gallery__item
+            .gallery__bg
+            .gallery__num
+              span= item.num
+            .gallery__img
+              img(src=`uploads/main-page/gallery-img-${item.image}.png`, alt="Product photo")
+            h4= item.title

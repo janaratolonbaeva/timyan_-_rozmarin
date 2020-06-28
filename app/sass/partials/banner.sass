@@ -1,0 +1,33 @@
+.banner
+  position: relative
+  padding: 50px 20px
+  text-align: center
+  background: url('../img/bg-banner.jpg') no-repeat
+  background-size: cover
+  background-position-x: -145px
+  +minWidth850
+    background-position-x: 0
+  .error-btn
+    position: absolute
+    top: 15px
+    right: 15px
+    cursor: pointer
+    &:hover 
+      svg
+        fill: $colorInfo
+        transform: rotate(-45deg)
+    svg 
+      fill: #a0a4a1
+      transition: $transition
+  p 
+    font-size: 36px
+    line-height: 30px
+    font-family: $circleRounded
+
+
+
+
+
+
+
+

@@ -1,0 +1,67 @@
+section.card.clearfix
+  .card__img
+    .label
+      svg(width="20", height="20")
+        use(xlink:href="#ic-fire")
+      span спецпредложение
+    img(src="uploads/card-page/card-img.jpg", alt="Product image")
+  .card__content
+    a(href="catalog.html").link
+      svg(width="20", height="30")
+        use(xlink:href="#ic-arrow-left")
+      | Суши и ролы
+    h3 Гункан «Унаги»
+    .card__content-aboutProduct.clearfix
+      .card__content-text
+        p краб-крем, грибы шиитаке терияки, авокадо, огурец, спайси соус, икра масаго, кунжут 231 г
+      .card__content-info
+        p
+          svg(width="20", height="20")
+            use(xlink:href="#ic-weight")
+          | Блюдо 230 грамм
+        p
+          svg(width="23", height="25")
+            use(xlink:href="#ic-fresh")
+          | 356 ккал
+    .card__content-stock
+      .wrap-stock.clearfix
+        .wrap-stock-left
+          .stock__price 234 ₽
+          .stock__text выгоды
+        .wrap-stock-right
+          p
+            svg(width='20', height='20')
+              use(xlink:href='#ic-timer')
+            | Акция действует:
+          .inputs
+            form
+              input(type='text')
+              input(type='text')
+              input(type='text')
+    .price__block.clearfix
+      span.price
+        | 99
+        small ₽
+      strike
+        | 120
+        small ₽
+      .btn__tick-wrap
+        .btn__tick
+          svg(viewBox='0 0 48 48', xmlns='http://www.w3.org/2000/svg')
+            path(d='M 18 32.34 l -8.34 -8.34 -2.83 2.83 11.17 11.17 24 -24 -2.83 -2.83 z', stroke='#305e44', fill='transparent')
+        button.btn.btn--sm.btn--basket
+          span
+            svg(width='25', height='25')
+              use(xlink:href='#ic-basket')
+            | В корзину
+  
+
+
+
+
+
+
+
+
+
+

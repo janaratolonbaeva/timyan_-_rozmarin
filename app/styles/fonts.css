@@ -1,0 +1,26 @@
+
+@font-face {
+    font-family: 'idealist_sanslight';
+    src: url('../fonts/idealist_sans_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'idealist_sansregular';
+    src: url('../fonts/idealist_sans-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Circe Rounded';
+    src: url('../fonts/CirceRounded-Regular.woff2') format('woff2'),
+        url('../fonts/CirceRounded-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
